@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import UnifiedTable from './UnifiedTable';
+import UnifiedTable from './UnifiedTable/UnifiedTable.jsx';
 import axios from 'axios';
 
 const MainComponent = ({ activeComponent }) => {

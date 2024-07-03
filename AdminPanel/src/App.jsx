@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Registration from './components/Register/Register.jsx';
 import Login from './components/Login/Login.jsx';
 import ProjectManagement from './components/ProjectManagement.jsx';
-import UploadDocument from './components/UploadDocument.jsx';
-import CreateIssue from './components/CreateIssue.jsx';
-import AdminPage from './components/AdminPage.jsx';
-import AddLead from './components/AddLead.jsx'; // Assuming you have this component
-import Sidebar from './components/Sidebar.jsx'; // Assuming you have this component
+import UploadDocument from './components/UploadDocument/UploadDocument.jsx';
+import CreateIssue from './components/CreateIssue/CreateIssue.jsx';
+import AdminPage from './components/AdminPage/AdminPage.jsx';
+import AddLead from './components/AddLead/AddLead.jsx'; // Assuming you have this component
+import Sidebar from './components/Sidebar/Sidebar.jsx'; // Assuming you have this component
 import './App.css'; // Ensure styles are applied
 
 function App() {

@@ -5,7 +5,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./UploadDocument.css";
 
 const UploadDocument = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
   const [documentName, setDocumentName] = useState('');
+
+  const handleFileChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+    const fileName = e.target.files[0].name;
+    setDocumentName(fileName);
+  };
 
   const handleUpload = async () => {
     try {
@@ -15,9 +22,17 @@ const UploadDocument = () => {
         throw new Error('Token not found');
       }
 
+      if (!selectedFile) {
+        throw new Error('Please select a file to upload.');
+      }
+
+      if (!documentName) {
+        throw new Error('Document name is required.');
+      }
+
       await axios.post(
         "http://localhost:8800/api/v1/upload",
-        { docname: documentName },
+        { docname: documentName }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
@@ -32,7 +47,7 @@ const UploadDocument = () => {
       });
     } catch (error) {
       console.error('Error:', error.response?.data || error.message);
-      toast.error("Upload failed.", {
+      toast.error(error.message || "Upload failed.", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -48,10 +63,8 @@ const UploadDocument = () => {
     <div className="upload-document">
       <h2>Upload Document</h2>
       <input
-        type="text"
-        placeholder="Document Name"
-        value={documentName}
-        onChange={(e) => setDocumentName(e.target.value)}
+        type="file"
+        onChange={handleFileChange}
       />
       <button onClick={handleUpload}>Upload</button>
       <ToastContainer />

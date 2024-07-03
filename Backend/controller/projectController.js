@@ -1,18 +1,25 @@
 import { db } from "../connect.js";
 
 export const uploadDocument = (req, res) => {
-    const {docname} = req.body;
-    const query = 'INSERT INTO documents (docname, user_id) VALUES (?, ?)';
-    const userId = req.user.id;
+  const { docname } = req.body; 
+  const userId = req.user.id; 
+  const query = 'INSERT INTO documents (docname, user_id) VALUES (?, ?)';
 
-    db.query(query, [docname, userId], (err, result) => {
-        if (err) {
-          return res.status(500).json({ message: 'Error uploading document', error: err });
-        }
-        res.json({ message: 'Document uploaded successfully.' });
-      });
+  
+  if (!docname) {
+      return res.status(400).json({ message: 'Document name is required.' });
+  }
 
+  db.query(query, [docname, userId], (err, result) => {
+      if (err) {
+          console.error('Error uploading document:', err);
+          return res.status(500).json({ message: 'Error uploading document', error: err.message });
+      }
+      res.json({ message: 'Document uploaded successfully.' });
+  });
 }
+
+
 
 
 export const createIssue= (req, res) => {

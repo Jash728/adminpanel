@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import UploadDocument from './UploadDocument';
-import CreateIssue from './CreateIssue';
-import AddLead from './AddLead';
+import Sidebar from './Sidebar/Sidebar.jsx';
+import UploadDocument from './UploadDocument/UploadDocument.jsx';
+import CreateIssue from './CreateIssue/CreateIssue.jsx';
+import AddLead from './AddLead/AddLead.jsx';
 
 import MainComponent from './MainComponent.jsx'
 import "../App.css";
-import AdminPage from './AdminPage.jsx';
+import AdminPage from './AdminPage/AdminPage.jsx';
 
 function ProjectManagement() {
   const [activeComponent, setActiveComponent] = useState('upload');
