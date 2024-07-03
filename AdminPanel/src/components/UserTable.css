@@ -1,0 +1,62 @@
+.user-table-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
+}
+
+.user-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.user-table .editing input,
+.user-table .editing select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-table .editing .save-btn,
+.user-table .editing .cancel-btn {
+  margin-right: 5px;
+}
+
+.user-table .edit-btn,
+.user-table .delete-btn {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.user-table .delete-btn {
+  background-color: #dc3545;
+}
+
+.user-table .edit-btn:hover,
+.user-table .delete-btn:hover,
+.user-table .save-btn:hover,
+.user-table .cancel-btn:hover {
+  opacity: 0.8;
+}

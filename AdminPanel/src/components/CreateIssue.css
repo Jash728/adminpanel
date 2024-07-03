@@ -1,0 +1,49 @@
+.create-issue {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  margin-left: 300px;
+  padding: 30px;
+  background-color: #ecf0f1; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; 
+}
+
+.create-issue h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 24px;
+}
+
+.create-issue .input-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.create-issue input {
+  width: calc(100% - 24px); 
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7; 
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.create-issue button {
+  width: calc(100% - 24px); 
+  padding: 12px;
+  background-color: #3498db; 
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.create-issue button:hover {
+  background-color: #2980b9; 
+  transform: translateY(-2px);
+}
