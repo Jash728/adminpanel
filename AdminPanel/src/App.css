@@ -5,9 +5,9 @@
 .main-content {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-start; /* Ensure content starts from the left */
-  align-items: flex-start; /* Ensure content aligns at the top */
+  justify-content: flex-start; 
+  align-items: flex-start; 
   padding: 20px;
   background: #f4f7f9;
-  margin-left: 250px; /* Ensure enough margin to avoid sidebar overlap */
+  margin-left: 250px; 
 }

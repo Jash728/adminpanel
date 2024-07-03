@@ -6,9 +6,9 @@ import ProjectManagement from './components/ProjectManagement.jsx';
 import UploadDocument from './components/UploadDocument/UploadDocument.jsx';
 import CreateIssue from './components/CreateIssue/CreateIssue.jsx';
 import AdminPage from './components/AdminPage/AdminPage.jsx';
-import AddLead from './components/AddLead/AddLead.jsx'; // Assuming you have this component
-import Sidebar from './components/Sidebar/Sidebar.jsx'; // Assuming you have this component
-import './App.css'; // Ensure styles are applied
+import AddLead from './components/AddLead/AddLead.jsx'; 
+import Sidebar from './components/Sidebar/Sidebar.jsx'; 
+import './App.css'; 
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,8 +38,6 @@ function App() {
             <Route path="/projectManager/issue" element={<CreateIssue />} />
             <Route path="/sales" element={<ProjectManagement />} />
             <Route path="/admin" element={<ProjectManagement />} />
-
-            {/* Redirect to login if no user or unauthorized */}
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         </div>

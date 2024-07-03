@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './UserTable.css'; // Import your CSS file
+import './UserTable.css'; 
 
 const UserTable = ({ users, fetchUsers }) => {
   const [editUser, setEditUser] = useState(null);
