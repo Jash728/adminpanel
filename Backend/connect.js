@@ -1,10 +1,10 @@
 import mysql from "mysql"
 
 export const db = mysql.createConnection({
-    host: "viaduct.proxy.rlwy.net",
+    host: "localhost",
     user : "root",
-    password : "yfLmboAejgnSCdIBvgpGRILwVcoRVkOD",
-    database : "railway",
+    password : "jashroot",
+    database : "adminpanel",
     connectionLimit: 10 ,
     connectTimeout: 10000,
     waitForConnections: true ,
