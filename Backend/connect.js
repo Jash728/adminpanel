@@ -1,5 +1,7 @@
-import mysql from "mysql"
+import mysql from "mysql2"
+import dotenv from 'dotenv';
 
+dotenv.config();
 // export const db = mysql.createConnection({
 //     host: "localhost",
 //     user : "root",
@@ -12,10 +14,10 @@ import mysql from "mysql"
 // })
 
 export const db = mysql.createConnection({
-    host: "bidtvtg5r4lv0mrhzcvu-mysql.services.clever-cloud.com",
-    user : "ujiadq6a3dtfngxu",
-    password : "1WVmSQKpig3RNBeT0QFp",
-    database : "bidtvtg5r4lv0mrhzcvu",
+    host: process.env.DB_HOST,
+    user : process.env.DB_USERNAME,
+    password : process.env.DB_PASSWORD,
+    database : process.env.DB_DBNAME,
     connectionLimit: 10 ,
     connectTimeout: 10000,
     waitForConnections: true ,
