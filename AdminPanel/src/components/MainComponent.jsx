@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import UnifiedTable from './UnifiedTable/UnifiedTable.jsx';
 import axios from 'axios';
 
