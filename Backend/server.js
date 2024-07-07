@@ -25,6 +25,8 @@ app.use("/api/v1", projectRoutes);
 app.use("/api/v2", salesRoutes);
 app.use("/api/v3", adminRoutes);
 
-app.listen(8800, () => {
+const port = process.env.PORT || 8800;
+
+app.listen(port, () => {
   console.log("Working");
 });
